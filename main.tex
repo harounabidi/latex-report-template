@@ -1,0 +1,61 @@
+\documentclass{RS}
+
+\begin{document}
+
+% =========== Title ===============
+
+\maketitle
+
+% ========== Abstract =============
+
+\pagenumbering{roman}
+
+\import{./other/}{dedication.tex}
+
+\import{./other/}{acknowledgment.tex}
+
+\import{./other/}{abstract.tex}
+
+% ============ TOC ================
+
+\tableofcontents
+
+\newpage
+
+\listoffigures
+\listoftables
+
+\vspace{2cm}
+
+\lstlistoflistings
+
+% ======== Abriviations ===========
+
+\printglossary[title={\Huge Abriviations}]
+
+\newpage
+
+% ========== Chapters =============
+
+\pagenumbering{arabic}
+
+\import{./chapters/}{introduction.tex}
+
+\import{./chapters/}{chapter1.tex}
+\import{./chapters/}{chapter2.tex}
+\import{./chapters/}{chapter3.tex}
+\import{./chapters/}{chapter4.tex}
+% \import{./chapters/}{chapter5.tex}
+% \import{./chapters/}{chapter6.tex}
+
+\import{./chapters/}{conclusion.tex}
+
+% ========= Bibliography ===========
+
+\addcontentsline{toc}{chapter}{Bibliography} 
+\printbibliography[nottype=online, title={Bibliography}]
+
+\addcontentsline{toc}{chapter}{Webography}
+\printbibliography[filter=online, title={Webography}]
+
+\end{document}
